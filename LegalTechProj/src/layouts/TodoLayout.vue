@@ -58,6 +58,21 @@
           </q-item>
 
           <q-item
+            to="/dashboard"
+            exact
+            clickable
+            v-ripple
+          >
+            <q-item-section avatar>
+              <q-icon name="dashboard" />
+            </q-item-section>
+
+            <q-item-section>
+              Dashboardd
+            </q-item-section>
+          </q-item>
+
+          <q-item
             to="/help"
             exact
             clickable
@@ -124,7 +139,6 @@
       <keep-alive>
         <router-view />
       </keep-alive>
-
     </q-page-container>
   </q-layout>
 </template>

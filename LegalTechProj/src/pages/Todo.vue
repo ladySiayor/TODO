@@ -3,6 +3,7 @@
     <div class="row q-pa-sm bg-primary">
       <q-input
         v-model="newTask"
+        @keyup.enter="addTask"
         class="col"
         square
         filled
@@ -12,6 +13,7 @@
       >
         <template v-slot:append>
           <q-btn
+            @click="addTask"
             round
             dense
             flat
@@ -49,19 +51,30 @@
           v-if="task.done"
           side
         >
-          <q-item-label>
-            <q-btn
-              @click.stop="deleteTask(index)"
-              flat
-              round
-              dense
-              color="primary"
-              icon="delete"
-            />
-          </q-item-label>
+          <q-btn
+            @click.stop="deleteTask(index)"
+            flat
+            round
+            dense
+            color="primary"
+            icon="delete"
+          />
         </q-item-section>
       </q-item>
     </q-list>
+    <div
+      v-if="!tasks.length"
+      class="no-task absolute-center"
+    >
+      <q-icon
+        name="check"
+        size="100px"
+        color="primary"
+      />
+      <div class="text-h5 text-primary text-center">
+        No tasks
+      </div>
+    </div>
   </q-page>
 </template>
 
@@ -71,26 +84,27 @@ export default {
     return {
       newTask: '',
       tasks: [
-        {
-          title: "Learn Quasar",
-          done: false
-        },
-        {
-          title: "Learn MERN",
-          done: true
-        },
-        {
-          title: "Learn C++",
-          done: false
-        },
-        {
-          title: "Learn German",
-          done: false
-        },
+        // {
+        //   title: "Learn Quasar",
+        //   done: false
+        // },
+        // {
+        //   title: "Learn MERN",
+        //   done: true
+        // },
+        // {
+        //   title: "Learn C++",
+        //   done: false
+        // },
+        // {
+        //   title: "Learn German",
+        //   done: false
+        // },
       ]
     }
   },
   methods: {
+    //Deleting a task
     deleteTask (index) {
       this.$q.dialog({
         title: 'Confirm',
@@ -101,6 +115,15 @@ export default {
         this.tasks.splice(index, 1)
         this.$q.notify('Task successfuly deleted')
       })
+    },
+    //Adding a new task
+    addTask () {
+      this.tasks.push({
+        title: this.newTask,
+        done: false
+      })
+      //clearing the input field
+      this.newTask = ''
     }
   }
 
@@ -113,5 +136,8 @@ export default {
     text-decoration: line-through;
     color: #bbb;
   }
+}
+.no-task {
+  opacity: 0.5;
 }
 </style>

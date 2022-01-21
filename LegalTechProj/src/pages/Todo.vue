@@ -84,22 +84,7 @@ export default {
     return {
       newTask: '',
       tasks: [
-        // {
-        //   title: "Learn Quasar",
-        //   done: false
-        // },
-        // {
-        //   title: "Learn MERN",
-        //   done: true
-        // },
-        // {
-        //   title: "Learn C++",
-        //   done: false
-        // },
-        // {
-        //   title: "Learn German",
-        //   done: false
-        // },
+
       ]
     }
   },

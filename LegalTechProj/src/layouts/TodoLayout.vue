@@ -11,7 +11,6 @@
           @click="toggleLeftDrawer"
         />
       </q-toolbar>
-
       <div class="q-px-lg q-pt-xl q-mb-md">
         <div class="text-h4">
           <q-avatar>
@@ -68,7 +67,7 @@
             </q-item-section>
 
             <q-item-section>
-              Dashboardd
+              Dashboard
             </q-item-section>
           </q-item>
 

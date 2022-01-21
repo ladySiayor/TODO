@@ -2,52 +2,97 @@
 
 A Quasar Framework app
 
-## Install the dependencies
-```install node js 
-```install an IDE
-```install npm ~ npm install
-```install git bash (windows OS)
-```install quasar ~ npm install -g @quasar/cli
-```create a quasar project ~  quasar create <folder_name>
+### Windows OS Software installation
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-```change directory to the quasar project created ~ cd <folder_name>
-quasar dev
-```
+- Install Git bash – installation steps can be found  [here](https://phoenixnap.com/kb/how-to-install-git-windows)
+
+- Install nodeJs – installation process can be found [here](https://www.guru99.com/download-install-node-js.html)
+
+- Install an IDE (VS Code in our case) - installation steps can be found [here](https://code.visualstudio.com/docs/setup/windows)
 
 
-### Build the app for production
-```bash
-quasar build
-```
+### Linux OS Software installation
+
+   - Install Git – installation steps can be found [here](https://www.atlassian.com/git/tutorials/install-git#linux)
+
+   - Install nodeJs – installation process can be found [here](https://www.geeksforgeeks.org/installation-of-node-js-on-linux/)
+
+   - Install an IDE (VS Code in our case) - installation steps can be found [here](https://code.visualstudio.com/docs/setup/linux)
+
+
+### Installation of Quasar framework    
+
+- launch the IDE
+
+- Open the terminal in your IDE
+
+- Switch the terminal to gitbash mode. (For windows OS)
+    Change directory to where you want your computer you want have the project saved. For instance, if you want your work to be on your desktop, type: cd Desktop/
+    Create a folder on your desktop: mkdir <folderName> and change directory to the folder: cd <folderName>/. NB: do not include the <>
+
+- Install npm (Node Package Manager). Type npm install to have all the node modules installed
+
+- Install Quasar by typing:  npm install @quasar/cli. If you want quasar to be installed globally add -g before the @quasar/cli; npm install -g @quasar/cli
+
+- Create a quasar project by typing quasar create <projectName>
+
+- After quasar framework, give the right answers to the prompts that shows up.
+
+
+### Starting the app in developement mode
+### Change directory to the quasar project you created: `cd <projectName>`
+- Web: `npx quasar dev` to run the application in your browser
+- Mac Os: `npx quasar dev -m electron` to create the Mac version of the App.
+- Windows OS: `npx quasar build electron` to create the windows execution file of  the app
+- Android | IOS: steps can be found [here](https://quasar.dev/quasar-cli/developing-cordova-apps/preparation)
+
+
+### Function Requirements of TodoApp
+#### REQ-001:  
+- `REQ-001.1` - Users should be able to create an account with the right format.
+        
+- `REQ-001.2` - Users should be able to create an account through their social handles and email; Facebook & Twitter 
+
+- `REQ-001.3` - Users should be able to log in with their correct credentials
+
+- `REQ-001.4` - Users should be able to login in through the social media account used in signing up as well as email
+
+- `REQ-001.5` - Users should be able to edit their profile
+
+### REQ-002:
+- `REQ-002.1` – Users must be able to create/add tasks.
+
+- `REQ-002.2` – Users must be able to mark tasks as complete, incomplete and in progress
+
+- `REQ-002.3` - Users must be able to sort tasks
+
+- `REQ-002.4` – Users must be able to edit task
+
+- `REQ-002.5` – Users must be able to delete a single task
+
+- `REQ-002.6` – Users must be able to delete multiple tasks
+
+- `REQ-002.7` – Users must be to pick a date (start date and required end date of task)
+    
+### REQ-003:
+- `REQ-003.1` - All tasks created should be stored and be made accessible to users
+- `REQ-003.2` - All CRUD actions performed by users should match the details stored
+
+### REQ-004
+- `REQ-004.1` – Users should be able to see the total number of tasks completed
+
+- `REQ-004.2` – Users should be able to see the total number of tasks not completed
+
+- `REQ-004.3` – Users should be able to see the total number of tasks still in progress
+
+- `REQ-004.4` – Users should be able to see a chart indicating tasks that are complete, incomplete and still in progress
+
+
 
 ### Customize the configuration
 See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
 
-### TodoApp Functional Requirements
-```User should be able to create an account with correct credentials(authentication)
-    User should be able to create account through social links (authentication) 
-    User should be able to log in with correct credentials
-    User should be able to log in through social links
-    User should be able to edit profile
-```
 
-```User should be able to pick a date (task start date and required end date of task)
-    User must be able to create tasks
-    Tasks should be saved in a database
-    User must be able to see all tasks stroed in the db
-    User should be able to mark tasks as completed or not completed
-    User must be able to sort tasks
-    User should be able to edit task
-    User should be able to delete single task
-    User should be able to delete multiple tasks
-    Changes made should reflect in the database.
-    Dashboard to display tasks; completed, in progress and Failed Todo over a period.
-```
 
-### Roles
-```Front end ~ 
-    Authentication ~
-    Database ~
-    Backend
-```
+
+

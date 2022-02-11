@@ -1,6 +1,6 @@
 <template>
   <q-page>
-    <div class="row q-col-gutter-sm q-ma-xs q-mr-sm">
+    <div class="row justify-center text-center q-col-gutter-xl q-ma-xl q-mr-md q-my-xl q-pt-xl">
       <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
         <q-card>
           <q-card-section
@@ -68,9 +68,8 @@
 
   </q-page>
 </template>
+<script>
+export default {
 
-<style lang="sass" scoped>
-.my-card
-  width: 100%
-  max-width: 250px
-</style>
+}
+</script>

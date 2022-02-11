@@ -18,7 +18,95 @@
             dense
             flat
             icon="add"
-          />
+            color="primary"
+          >
+
+            <q-tooltip
+              q-tooltip
+              anchor="top middle"
+              self="top middle"
+            >Add Task
+            </q-tooltip>
+          </q-btn>
+
+          <q-btn
+            round
+            dense
+            icon="event"
+            flat
+            color="secondary"
+          >
+
+            <q-tooltip
+              anchor="top middle"
+              self="top middle"
+            >Start Date
+            </q-tooltip>
+            <q-popup-proxy
+              @before-show="updateProxy"
+              cover
+              transition-show="scale"
+              transition-hide="scale"
+            >
+              <q-date v-model="proxyDate">
+                <div class="row items-center justify-end q-gutter-sm">
+                  <q-btn
+                    label="Cancel"
+                    color="primary"
+                    flat
+                    v-close-popup
+                  />
+                  <q-btn
+                    label="OK"
+                    color="primary"
+                    flat
+                    @click="save"
+                    v-close-popup
+                  />
+                </div>
+              </q-date>
+            </q-popup-proxy>
+          </q-btn>
+
+          <q-btn
+            round
+            dense
+            icon="event"
+            flat
+            color="negative"
+          >
+
+            <q-tooltip
+              anchor="top middle"
+              self="top middle"
+            >End Date
+            </q-tooltip>
+            <q-popup-proxy
+              @before-show="updateProxy"
+              cover
+              transition-show="scale"
+              transition-hide="scale"
+            >
+              <q-date v-model="proxyDate">
+                <div class="row items-center justify-end q-gutter-sm">
+                  <q-btn
+                    label="Cancel"
+                    color="primary"
+                    flat
+                    v-close-popup
+                  />
+                  <q-btn
+                    label="OK"
+                    color="negative"
+                    flat
+                    @click="save"
+                    v-close-popup
+                  />
+                </div>
+              </q-date>
+            </q-popup-proxy>
+          </q-btn>
+
         </template>
       </q-input>
     </div>
@@ -79,6 +167,8 @@
 </template>
 
 <script>
+
+import { ref } from 'vue';
 export default {
   data () {
     return {
@@ -86,6 +176,11 @@ export default {
       tasks: [
 
       ]
+    }
+  },
+  setup () {
+    return {
+      text: ref('Field content')
     }
   },
   methods: {

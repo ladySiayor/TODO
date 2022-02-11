@@ -24,17 +24,22 @@ A Quasar Framework app
 
 - launch the IDE
 
-- Open the terminal in your IDE
+- Open your preferred terminal application
+    - For Windows, you can use git bash
 
-- Switch the terminal to gitbash mode. (For windows OS)
-    Change directory to where you want your computer you want have the project saved. For instance, if you want your work to be on your desktop, type: cd Desktop/
-    Create a folder on your desktop: mkdir <folderName> and change directory to the folder: cd <folderName>/. NB: do not include the <>
+- Change directory to where you want your computer you want have the project saved. 
 
-- Install npm (Node Package Manager). Type npm install to have all the node modules installed
+    - For instance, if you want your work to be on your desktop, type: `cd Desktop/`
 
-- Install Quasar by typing:  npm install @quasar/cli. If you want quasar to be installed globally add -g before the @quasar/cli; npm install -g @quasar/cli
+- Create a folder on your desktop: `mkdir <folderName>`
 
-- Create a quasar project by typing quasar create <projectName>
+- Change directory to the folder: `cd <folderName>/`
+
+- Install npm (Node Package Manager) by typing `npm install` to have all the node modules installed
+
+- Install Quasar by typing:  `npm install @quasar/cli`. If you want quasar to be installed globally add -g before the @quasar/cli; `npm install -g @quasar/cli`
+
+- Create a quasar project by typing `quasar create <projectName>`
 
 - After quasar framework, give the right answers to the prompts that shows up.
 
